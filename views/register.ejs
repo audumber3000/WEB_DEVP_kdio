@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+             KIDO
+        </title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link rel="stylesheet" href="/stylesheets/app.css">
+
+    </head>
+
+     <body>
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand " href="#">KDIO</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
+      </li>
+       <li class="nav-item active">
+        <a class="nav-link" href="#">Stories <span class="sr-only">(current)</span></a>
+      </li>
+      
+      
+      
+    </ul>
+    
+    <button class="log btn btn-outline-success my-2 my-sm-0" type="submit"><a href="/register">SignUp</a></button>
+    <button class="log btn btn-outline-success my-2 my-sm-0" type="submit"><a href="/login">LogIn</a></button>
+  </div>
+</nav>
+		 
+		 
+<div class= "shop container">
+	<% if(error && error.length>0){ %>
+	<div class="alert alert-danger" role="alert">
+   <p> <%= error %> </p>
+</div>
+<%	} %>
+	
+	
+	
+	</div>
+<div class="container kala">
+	<div class="card">
+<h2>SignIn</h2>
+	
+<form  action="/register" method="POST">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Username</label>
+      <input type="text" class="form-control" name="username" placeholder="Enter Username" required>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Password</label>
+      <input type="password" class="form-control" name="password" Placeholder="Enter Password" required>
+    </div>
+  </div>
+
+  
+	<div class="form-group">
+    <label for="inputAddress">Contact</label>
+    <input type="text" class="form-control" name="contact" placeholder="Enter Contact +91" required>
+  </div>
+	<div class="form-group">
+    <label for="inputAddress">Address</label>
+    <input type="text" class="form-control" name="address" placeholder="Enter Address" required>
+  </div>
+  
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">Name</label>
+      <input type="text" class="form-control" name="Name" Placeholder="Enter Name :)" required>
+    </div>
+   
+    <div class="form-group col-md-2">
+      <label for="inputZip">MilkID</label>
+      <input type="text" class="form-control" name="MilkID" Placeholder="Enter MilkID" required>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck" checked>
+      <label class="form-check-label" for="gridCheck">
+       By continuing, you agree to KDIO'S <a href="/terms">Terms and Conditions</a> of Use.
+      </label>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary btn-lg btn-block">Signing you In > > > </button>
+
+  
+</form>
+</div>
+		 </div>
+		 
+		 		  <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4"></h1>
+    <p class="lead">!! Handcrafted for Rular India !!</p>
+  </div>
+</div>
+
+ 
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+</html>
+
+
+
+
+
+
+<!---!>
+<h1>Sign Up Form</h1>
+
+<form action="/register" method="POST">
+    <input type="text" name="username" placeholder="username">
+    <input type="password" name="password" placeholder="password">
+	<input type="text" name="MilkID" placeholder="MilkID">
+	<input type="text" name="Name" placeholder="Name">
+	<input type="text" name="deg" placeholder="Degree">
+	<input type="text" name="snf" placeholder="Snf">
+	<input type="text" name="pro" placeholder="Protine">
+	
+	
+    <button>Submit</button>
+</form>
+
+<li><a href="/register">Sign Up!</a></li>
+<li><a href="/logout">Log Out</a></li>
+<li><a href="/login">Log In</a></li>

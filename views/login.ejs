@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+             KIDO
+        </title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link rel="stylesheet" href="/stylesheets/app.css">
+
+    </head>
+
+     <body>
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand " href="#">KDIO</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/aboutus">About <span class="sr-only">(current)</span></a>
+      </li>
+       <li class="nav-item active">
+        <a class="nav-link" href="#">Stories <span class="sr-only">(current)</span></a>
+      </li>
+      
+      
+      
+    </ul>
+    
+    <button class="log btn btn-outline-success my-2 my-sm-0" type="submit"><a href="/register">SignUp</a></button>
+    <button class="log btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+  </div>
+</nav>
+		 
+		 <div class= "container">
+	<% if(error && error.length>0){ %>
+	<div class="alert alert-danger" role="alert">
+   <p> <%= error %> </p>
+</div>
+<%	} %>
+	
+	
+	
+	<% if(success && success.length>0){ %>
+	<div class="alert alert-success" role="alert">
+  <p> <%= success %> </p>
+</div>
+	<% } %>
+	
+	</div>
+		 
+		 
+<div class="container kala">
+<div class="card ">
+<h2 > LogIn </h2>
+		 	
+
+<form action="/login" method="POST"  >
+  <div class="form-group">
+    <label for="exampleInputEmail1">Username</label>
+    <input type="text" class="form-control" name="username" aria-describedby="emailHelp" placeholder="Enter Username">
+    <small id="emailHelp" class="form-text text-muted"></small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" name="password" placeholder="Enter Password">
+    <small id="emailHelp" class="form-text text-muted">Your are safe , We respect your Privacy!</small>
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1" checked>
+    <label class="form-check-label" for="exampleCheck1">By continuing, you agree to KDIO'S <a href="/terms">Terms and Conditions</a> of Use.</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Login</button>
+</form>
+</div>
+		 </div>
+
+
+		 
+		  <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4"></h1>
+    <p class="lead">!! Handcrafted for Rular India !!</p>
+  </div>
+</div>
